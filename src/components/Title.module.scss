@@ -1,0 +1,46 @@
+@import "./../styles/variables.scss";
+
+
+.title{
+    height: 40vh;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: $lato-font;
+
+    h1{
+        font-size: 4rem;
+        font-weight: 800;
+
+    }
+
+    p{
+        padding-top: 1vh;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title{
+        h1{
+        font-size: 3rem;
+    
+        }
+        p{
+            font-size:1rem;
+        }
+}
+}
+@media (max-width: 480px) {
+.title{
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+}

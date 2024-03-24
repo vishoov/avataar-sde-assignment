@@ -1,0 +1,155 @@
+@import "./../styles/variables.scss";
+
+.header {
+    height: $header-height;
+    background: $nav-bg;
+    color: $text2;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 1px 5px $primary;
+
+    &__content {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 $spacing-md;
+    
+        transition: 0.3s ease padding;
+        
+        height: 100%;
+        display: flex;
+        align-items: center;
+        
+        & > div {
+            flex: 1;
+            white-space: nowrap;
+          
+            &:nth-child(2) {
+                display: flex;
+                justify-content: flex-end;
+                height: 100%;
+                
+                margin-right: $spacing-md;
+            }
+            &:last-of-type {
+                display: flex;
+                justify-content: flex-end;
+                flex: 0;
+            }
+        }
+    }
+
+    &__button__container {
+        display: none;
+        width: 350px;
+        @include breakpoint(md) {
+            display: initial;
+        }
+    }
+    &__toggler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include breakpoint(md) {
+            display: none;
+        }
+        & > svg {
+            display: block;
+            font-size: 32px;
+        }
+    }
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: $text2;
+    font-family: $lato-font;
+    
+}
+
+.nav {
+    width: 80%;
+    position: fixed;
+    top: $header-height;
+    right: -100%;
+    background: rgba($bg2, 0.8);
+    text-align: center;
+    padding: $spacing-md 0;
+ 
+    &--open {
+        transition: 0.2s ease right;
+        right: 0;
+    }
+
+    &__item {
+        display: block;
+        padding: $spacing-md;
+
+        text-decoration: none;
+        color: inherit;
+
+        height: 100%;
+
+        transition: 0.3s ease color;
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    @include breakpoint(md) {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 25px;
+        background: initial;
+        width: auto;
+        padding: 0px;
+        padding-right: 0px;
+
+        &__item {
+            padding: 0 $spacing-sm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__button__container {
+        @include breakpoint(md) {
+            display: none;
+        }
+        padding: $spacing-sm  ;
+        width: 40%;
+       
+    }
+}
+
+.search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+    
+}
+
+.button {
+    font-weight: 500;
+    border: none;
+    width: 250px;
+    height: 100%;
+    color:white;
+    cursor: pointer;
+    background-color: initial;
+    margin: 10px;
+    padding: 5px;
+    border-bottom: 1px solid $bg;
+
+    &:active {
+     
+        border: none;
+        border-radius: none;
+    }
+ 
+}

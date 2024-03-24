@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$lato-font: "Lato", sans-serif;
+$nav-bg: #2F302C;
+$bg: #EEEEEE;
+$bg2: rgb(0, 0, 0);
+$text: rgb(15, 15, 15);
+$text2: rgb(240, 240, 240);
+$primary: rgb(22, 210, 247);
+
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$header-height: 82px;
+
+$sm: 37.5em;
+$md: 48em;
+$lg: 64em;
+$xl: 75em;
+
+@mixin breakpoint($point) {
+    @if $point == md {
+        @media (min-width: $md) {
+            @content;
+        }
+    }
+}
