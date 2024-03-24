@@ -23,7 +23,10 @@ const Dropdown = () => {
       
       }else if (screenWidth < 1400) {
         newVisibleItems = navItems.slice(4, navItems.length);
-      }else {
+      }else if (screenWidth < 768) {
+        newVisibleItems = !navItems;
+      }
+      else {
        
         newVisibleItems = navItems.slice(7, navItems.length);
       }

@@ -19,11 +19,14 @@ const Header = () => {
         
             let newMaxItems;
         
-            if (screenWidth < 1008) {
+            if (screenWidth < 1008 && screenWidth>768) {
                 newMaxItems = 1;
-            } else if (screenWidth < 1200) {
+            } else if (screenWidth < 1200 && screenWidth>768) {
                 newMaxItems = 2;
-            }else if (screenWidth < 1400) {
+            }else if (screenWidth < 768) {
+                newMaxItems = 12;
+            }
+            else if (screenWidth < 1400 && screenWidth>768) {
                 newMaxItems = 4;
             }
              else {
