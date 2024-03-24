@@ -1,4 +1,4 @@
-dployed link : https://avataar-sde-assignment.vercel.app/
+deployed link : https://avataar-sde-assignment.vercel.app/
 
 
 # Getting Started with Create React App
